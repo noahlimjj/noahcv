@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
 // CV Download functionality
 document.getElementById('download-cv').addEventListener('click', function(e) {
     e.preventDefault();
-    const element = document.getElementById('cv-content');
+    const element = document.getElementById('pdf-cv');
     const opt = {
         margin:       0.3,
         filename:     'Noah_Lim_CV.pdf',
