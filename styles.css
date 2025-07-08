@@ -781,3 +781,105 @@ html {
     padding-left: 0.5rem;
     font-size: 0.97rem;
 } 
+
+@media print {
+    body {
+        background: #fff !important;
+        color: #111 !important;
+    }
+    .navbar,
+    .footer,
+    .read-more-dropdown,
+    .scroll-to-top {
+        display: none !important;
+    }
+    .section {
+        padding: 24px 0 !important;
+    }
+    .container {
+        padding: 0 10px !important;
+        max-width: 100% !important;
+    }
+    .hero {
+        padding: 32px 0 16px !important;
+        min-height: unset !important;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .hero-tagline {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .profile-pic {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .section-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .education-item,
+    .experience-item,
+    .research-item {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+        box-shadow: none !important;
+    }
+    .awards-grid,
+    .skills-grid {
+        gap: 1rem !important;
+    }
+    .award-item,
+    .skills-category {
+        padding: 1rem !important;
+    }
+    .skill-tag {
+        padding: 0.3rem 0.7rem !important;
+        font-size: 0.8rem !important;
+    }
+    .summary-text {
+        font-size: 0.95rem !important;
+    }
+    .education-header h3,
+    .experience-header h3,
+    .research-header h3 {
+        font-size: 1rem !important;
+    }
+    .education-date,
+    .experience-date {
+        font-size: 0.9rem !important;
+        padding: 0.2rem 0.7rem !important;
+    }
+    .award-item h4 {
+        font-size: 1rem !important;
+    }
+    .award-item p {
+        font-size: 0.85rem !important;
+    }
+    .research-title {
+        font-size: 0.9rem !important;
+    }
+    .skills-category h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.7rem !important;
+    }
+    .contact-item {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    .hero-buttons {
+        display: none !important;
+    }
+    .awards-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .dropdown-section, .dropdown-heading, .dropdown-content {
+        display: none !important;
+    }
+} 
