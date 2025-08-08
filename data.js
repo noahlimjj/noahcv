@@ -21,7 +21,7 @@ const websiteData = {
             institution: "Lee Kong Chian School of Medicine, M.D.",
             date: "Expected: July 2027",
             achievements: [
-                "Dean's List: M1 (2022), M2 (2023), M3 (2024)"
+                "Dean's List: M1 (2022-2023), M2 (2023-2024), M3 (2024-2025)"
             ]
         }
     ],
