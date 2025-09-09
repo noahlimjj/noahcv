@@ -13,12 +13,12 @@ const websiteData = {
     },
 
     // Professional Summary
-    summary: "Medical student and national jiu-jitsu athlete with an interest in utilizing artificial intelligence to improve patient outcomes. Committed to the pursuit of excellence, constant learning and innovation while demonstrating adaptability in high-pressure situations.",
+    summary: "Medical student and national jiu-jitsu athlete with an interest in the clinical applications of artificial intelligence. Passionate in helping patients regain function and return to active lifestyles, having first-hand experience of the physical and psychological impact of musculoskeletal conditions",
 
     // Education
     education: [
         {
-            institution: "Lee Kong Chian School of Medicine, M.D.",
+            institution: "Lee Kong Chian School of Medicine, MBBS",
             date: "Expected: July 2027",
             achievements: [
                 "Dean's List: M1 (2022-2023), M2 (2023-2024), M3 (2024-2025)"
@@ -92,7 +92,8 @@ const websiteData = {
         {
             conference: "Deep Learning for CT Detection",
             type: "Research",
-            title: "Deep Learning for CT Detection of Metastatic Epidural Spinal Cord Compression"
+            title: "Deep Learning for CT Detection of Metastatic Epidural Spinal Cord Compression",
+            link: "https://pubmed.ncbi.nlm.nih.gov/40647478/"
         },
         {
             conference: "Prognostic Factors Study",

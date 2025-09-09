@@ -68,18 +68,13 @@ window.addEventListener('scroll', () => {
 // CV Download functionality
 document.getElementById('download-cv').addEventListener('click', function(e) {
     e.preventDefault();
-    const element = document.getElementById('pdf-cv');
-    const opt = {
-        margin:       0.3,
-        filename:     'Noah_Lim_CV.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
-    };
-    html2pdf().set(opt).from(element).save().then(() => {
-        showNotification('PDF CV downloaded successfully!', 'success');
-    });
+    const link = document.createElement('a');
+    link.href = 'Noah Lim CV.docx';
+    link.download = 'Noah_Lim_CV.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showNotification('CV downloaded successfully!', 'success');
 });
 
 // Notification system
