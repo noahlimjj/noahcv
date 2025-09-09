@@ -5,6 +5,13 @@
       <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="6" fill="#3b82f6"/>
-  <text x="16" y="23" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="white">NL</text>
+  <rect width="32" height="32" rx="6" fill="url(#grad)"/>
+  
+  <!-- Medical heartbeat/pulse line -->
+  <path d="M4 16 L8 16 L10 12 L12 20 L14 8 L16 24 L18 12 L20 16 L28 16" 
+        stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Circular martial arts element (subtle yin-yang inspired) -->
+  <circle cx="24" cy="8" r="3" fill="white" opacity="0.9"/>
+  <circle cx="24" cy="8" r="1.5" fill="url(#grad)"/>
 </svg>
