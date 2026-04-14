@@ -65,6 +65,12 @@ const websiteData = {
             organization: "Abu Dhabi",
             year: "2019",
             icon: "fas fa-crown"
+        },
+        {
+            title: "JJAU World Championships 2025",
+            organization: "Silver Medal",
+            year: "2025",
+            icon: "fas fa-medal"
         }
     ],
 
@@ -98,7 +104,8 @@ const websiteData = {
         {
             conference: "Prognostic Factors Study",
             type: "Research",
-            title: "Prognostic Factors in Necrotizing Fasciitis: 17-Year Retrospective Study (Singapore)"
+            title: "Prognostic Factors in Necrotizing Fasciitis: 17-Year Retrospective Study (Singapore)",
+            link: "https://annals.edu.sg/extremity-necrotising-fasciitis-outcomes/"
         }
     ],
 
