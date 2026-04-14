@@ -43,6 +43,13 @@ const websiteData = {
     // Awards and Achievements
     awards: [
         {
+            title: "JJAU World Championship 2025",
+            organization: "Silver Medal",
+            year: "2025",
+            icon: "fas fa-medal",
+            link: "https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships"
+        },
+        {
             title: "Sports Excellence (Spex) Scholarship",
             organization: "Singapore Olympic Committee",
             year: "2024",
@@ -65,12 +72,6 @@ const websiteData = {
             organization: "Abu Dhabi",
             year: "2019",
             icon: "fas fa-crown"
-        },
-        {
-            title: "JJAU World Championships 2025",
-            organization: "Silver Medal",
-            year: "2025",
-            icon: "fas fa-medal"
         }
     ],
 
