@@ -150,16 +150,7 @@ a:hover { color: var(--blue); }
   pointer-events: none;
 }
 
-/* Subtle grid overlay */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-}
+
 
 .hero-container {
   position: relative;
@@ -173,38 +164,13 @@ a:hover { color: var(--blue); }
   align-items: center;
 }
 
-/* Eyebrow label */
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(59,130,246,0.15);
-  border: 1px solid rgba(59,130,246,0.3);
-  color: var(--blue);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.8rem;
-  border-radius: 20px;
-  margin-bottom: 1.25rem;
-}
-.hero-eyebrow i { font-size: 0.7rem; }
-
 .hero-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 800;
-  color: #ffffff;
+  color: #c9a227;
   line-height: 1.1;
   letter-spacing: -1px;
   margin-bottom: 1rem;
-}
-
-.hero-title span.highlight {
-  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-tagline {
