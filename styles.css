@@ -167,7 +167,7 @@ a:hover { color: var(--blue); }
 .hero-title {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 800;
-  color: #c9a227;
+  color: #ffffff;
   line-height: 1.1;
   letter-spacing: -1px;
   margin-bottom: 1rem;
