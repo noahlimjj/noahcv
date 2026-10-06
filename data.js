@@ -62,9 +62,15 @@ const websiteData = {
             icon: "fas fa-medal"
         },
         {
-            title: "5th Place – 19th Asian Games",
-            organization: "Hangzhou",
-            year: "2023",
+            title: "JJAU World Championship – 2nd Place",
+            organization: "Jiu-Jitsu",
+            year: "2025, 2026",
+            icon: "fas fa-medal"
+        },
+        {
+            title: "Asian Games – 5th Place",
+            organization: "Hangzhou (2023), Aichi Nagoya (2026)",
+            year: "2023, 2026",
             icon: "fas fa-medal"
         },
         {
