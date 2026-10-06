@@ -43,9 +43,9 @@ const websiteData = {
     // Awards and Achievements
     awards: [
         {
-            title: "JJAU World Championship 2025",
+            title: "JJAU World Championship",
             organization: "Silver Medal",
-            year: "2025",
+            year: "2025, 2026",
             icon: "fas fa-medal",
             link: "https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships"
         },
@@ -61,12 +61,7 @@ const websiteData = {
             year: "2019, 2021, 2022",
             icon: "fas fa-medal"
         },
-        {
-            title: "JJAU World Championship – 2nd Place",
-            organization: "Jiu-Jitsu",
-            year: "2025, 2026",
-            icon: "fas fa-medal"
-        },
+
         {
             title: "Asian Games – 5th Place",
             organization: "Hangzhou (2023), Aichi Nagoya (2026)",
