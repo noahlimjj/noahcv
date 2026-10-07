@@ -17,9 +17,7 @@ const websiteData = {
         name: "Noah Lim Tian Run",
         title: "Medical Student & National Jiu-Jitsu Athlete",
         tagline: "Medical student and national jiu-jitsu athlete",
-        email: "noahlimjj@gmail.com",
-        phone: "+65 9646 7502",
-        location: "Singapore 299450"
+        email: "noahlimjj@gmail.com"
     },
 
     // Professional Summary

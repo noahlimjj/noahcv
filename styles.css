@@ -152,7 +152,7 @@ ul { list-style: none; }
 .hero { padding: calc(4.25rem + var(--s-9)) 0 var(--s-8); }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 23rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
   gap: var(--s-9);
   align-items: end;
 }
@@ -177,12 +177,10 @@ ul { list-style: none; }
 
 .hero-figure img {
   width: 100%;
-  max-height: 68vh;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 50% 30%;
 }
-.hero-figure figcaption,
 .plate figcaption {
   font-size: 0.8rem;
   color: var(--muted);
@@ -245,24 +243,12 @@ ul { list-style: none; }
 .sec-body { min-width: 0; }
 
 /* About */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 10rem;
-  gap: var(--s-7);
-  align-items: start;
-}
+.about { max-width: 46rem; }
 .about-text {
   font-family: var(--serif);
   font-size: clamp(1.3rem, 2.2vw, 1.65rem);
   line-height: 1.45;
   color: var(--ink);
-}
-.about-photo {
-  width: 10rem;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: 50% 30%;
-  filter: grayscale(0.15);
 }
 
 /* Entries: education, experience, research */
@@ -376,13 +362,23 @@ ul { list-style: none; }
 
 /* Photo plates */
 .plates { padding-top: var(--section); }
+.plates-label {
+  border-top: 1px solid var(--ink);
+  padding-top: var(--s-5);
+  margin-bottom: var(--s-5);
+}
 .plates-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: var(--s-5);
-  align-items: end;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--s-6) var(--s-5);
 }
-.plate img { width: 100%; height: clamp(16rem, 36vw, 30rem); object-fit: cover; }
+.plate img { width: 100%; height: clamp(14rem, 22vw, 18rem); object-fit: cover; }
+.plate-a { grid-column: span 4; }
+.plate-b { grid-column: span 2; }
+.plate-a img, .plate-b img { height: clamp(18rem, 34vw, 28rem); }
+.plate-b img { object-position: 45% 50%; }
+.plate-c, .plate-d, .plate-e { grid-column: span 2; }
+.plate-e img { object-position: 50% 28%; }
 .plate figcaption span {
   display: block;
   font-size: 0.7rem;
@@ -599,9 +595,6 @@ ul { list-style: none; }
 
   .hero { padding-top: calc(4.25rem + var(--s-7)); }
   .hero-grid { grid-template-columns: 1fr; gap: var(--s-7); }
-  .hero-figure { max-width: 22rem; }
-  .about { grid-template-columns: 1fr; gap: var(--s-5); }
-  .about-photo { order: -1; width: 7rem; }
   .entry, .skills > div { grid-template-columns: 1fr; gap: var(--s-1); }
   .entry-when { padding-top: 0; }
   .entry-when span { display: inline; margin-left: var(--s-2); }
@@ -612,9 +605,12 @@ ul { list-style: none; }
   .record td:last-child { text-align: left; white-space: normal; }
   .honours li { flex-direction: column; gap: var(--s-1); }
   .honours li span:last-child { text-align: left; }
-  .plates-grid { grid-template-columns: 1fr; }
-  .plate img { height: auto; aspect-ratio: 3 / 2; }
-  .plate:last-child img { aspect-ratio: 4 / 5; }
+  .hero-figure { max-width: 15rem; order: -1; }
+  .plates-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5) var(--s-4); }
+  .plate-a { grid-column: 1 / -1; }
+  .plate-b, .plate-c, .plate-d, .plate-e { grid-column: span 1; }
+  .plate img, .plate-a img, .plate-b img { height: auto; aspect-ratio: 4 / 5; }
+  .plate-a img { aspect-ratio: 3 / 2; }
   .press-year { grid-template-columns: 1fr; }
   .press-year-label { padding-top: var(--s-5); }
   .press-toolbar { gap: 0; }
