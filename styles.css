@@ -593,8 +593,17 @@ ul { list-style: none; }
   .nav-link.active { border-bottom-color: var(--rule); }
   .hamburger { display: flex; }
 
-  .hero { padding-top: calc(4.25rem + var(--s-7)); }
-  .hero-grid { grid-template-columns: 1fr; gap: var(--s-7); }
+  :root { --section: 3.75rem; }
+  .hero { padding: calc(4.25rem + var(--s-6)) 0 var(--s-6); }
+  .hero-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+  .hero-title { margin: var(--s-4) 0 var(--s-5); }
+  .hero-lede { margin-bottom: var(--s-6); }
+  .facts { margin-top: var(--s-7); }
+  .facts > div { padding: var(--s-4) var(--s-4) 0 0; }
+  .facts > div + div { padding-left: var(--s-4); }
+  .facts > div:nth-child(n+3) { margin-top: var(--s-4); }
+  .facts dt { font-size: 1.75rem; }
+  .facts dd { font-size: 0.8rem; }
   .entry, .skills > div { grid-template-columns: 1fr; gap: var(--s-1); }
   .entry-when { padding-top: 0; }
   .entry-when span { display: inline; margin-left: var(--s-2); }
@@ -605,7 +614,13 @@ ul { list-style: none; }
   .record td:last-child { text-align: left; white-space: normal; }
   .honours li { flex-direction: column; gap: var(--s-1); }
   .honours li span:last-child { text-align: left; }
-  .hero-figure { max-width: 15rem; order: -1; }
+  /* Small round portrait with a gold ring, echoing the favicon */
+  .hero-figure { order: -1; width: 5.5rem; }
+  .hero-figure img {
+    border-radius: 50%;
+    outline: 1px solid var(--gold);
+    outline-offset: 4px;
+  }
   .plates-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5) var(--s-4); }
   .plate-a { grid-column: 1 / -1; }
   .plate-b, .plate-c, .plate-d, .plate-e { grid-column: span 1; }
@@ -622,6 +637,11 @@ ul { list-style: none; }
     gap: 0 var(--s-4);
   }
   .press-filters::-webkit-scrollbar { display: none; }
+  .press-filters:not(.press-langs) {
+    -webkit-mask-image: linear-gradient(to right, #000 82%, transparent);
+    mask-image: linear-gradient(to right, #000 82%, transparent);
+    padding-right: var(--s-6);
+  }
   .press-filter, .press-lang { white-space: nowrap; flex-shrink: 0; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-foot { margin-top: var(--s-8); }
