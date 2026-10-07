@@ -3,347 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Lim Tian Run - Medical Student & National Jiu-Jitsu Athlete</title>
+    <title>Noah Lim Tian Run — Medicine &amp; Ju-Jitsu</title>
+    <meta name="description" content="Noah Lim Tian Run: medical student at NTU's Lee Kong Chian School of Medicine and national ju-jitsu athlete for Team Singapore.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="cv-content">
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Noah Lim</h2>
-            </div>
+    <header class="navbar">
+        <nav class="nav" aria-label="Main">
+            <a href="#top" class="nav-name">Noah Lim</a>
             <ul class="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#record" class="nav-link">Record</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#news" class="nav-link">Press</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Noah Lim Tian Run</h1>
-                <p class="hero-tagline">Medical student and national jiu-jitsu athlete</p>
-                <div class="hero-contact">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:noahlimjj@gmail.com">noahlimjj@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+6596467502">+65 9646 7502</a>
-                    </div>
-
-                </div>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">Learn More</a>
-                    <a href="#" class="btn btn-secondary" id="download-cv">Download CV</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-ring">
-                    <img src="profile.jpg" alt="Noah Lim Tian Run profile picture" class="profile-pic" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Summary -->
-    <section id="about" class="section">
-        <div class="container">
-            <span class="section-label">About</span>
-            <h2 class="section-title">Professional Summary</h2>
-            <div class="section-divider"></div>
-            <div class="summary-content">
-                <p class="summary-text">
-                    Medical student and national jiu-jitsu athlete with an interest in the clinical applications of artificial intelligence. Passionate in helping patients regain function and return to active lifestyles, having first-hand experience of the physical and psychological impact of musculoskeletal conditions
+    <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-text">
+                <p class="eyebrow">Medicine &middot; Ju-Jitsu &middot; Singapore</p>
+                <h1 class="hero-title">Noah Lim<br>Tian Run</h1>
+                <p class="hero-lede">Medical student at NTU&rsquo;s Lee Kong Chian School of Medicine and national ju-jitsu athlete for Team Singapore.</p>
+                <p class="hero-links">
+                    <a href="#" id="download-cv" class="link-arrow">Download CV</a>
+                    <a href="#contact" class="link-arrow">Get in touch</a>
                 </p>
             </div>
+            <figure class="hero-figure">
+                <img src="images/worlds-2025-silver.jpg" width="1050" height="1400"
+                     alt="Noah Lim in a white gi holding his silver medal at the Ju-Jitsu World Championships in Bangkok">
+                <figcaption>Silver, Ju-Jitsu World Championships, Bangkok 2025</figcaption>
+            </figure>
+        </div>
+        <div class="wrap">
+            <dl class="facts">
+                <div><dt>3&times;</dt><dd>SEA Games gold</dd></div>
+                <div><dt>2&times;</dt><dd>World Championships silver</dd></div>
+                <div><dt>2&times;</dt><dd>Asian Games, top-five finishes</dd></div>
+                <div><dt>2025</dt><dd>Team Singapore flag bearer, SEA Games</dd></div>
+            </dl>
         </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="section">
-        <div class="container">
-            <span class="section-label">Academic Background</span>
-            <h2 class="section-title">Education</h2>
-            <div class="section-divider"></div>
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>Lee Kong Chian School of Medicine, MBBS</h3>
-                    <span class="education-date">Expected: July 2027</span>
-                </div>
-                <div class="education-details">
-                    <ul>
-                        <li>Dean's List: M1 (2022-2023), M2 (2023-2024), M3 (2024-2025)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="education-header">
-                    <h3>Anglo-Chinese School (Independent)</h3>
-                    <span class="education-date">Graduated: June 2020</span>
-                </div>
-                <div class="education-details">
-                    <ul>
-                        <li>Graduated with IB diploma</li>
-                    </ul>
-                </div>
+    <!-- 01 About -->
+    <section id="about" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">01</span><h2>About</h2></header>
+            <div class="sec-body about">
+                <p class="about-text">Medical student and national jiu-jitsu athlete with an interest in the clinical applications of artificial intelligence. Passionate about helping patients regain function and return to active lifestyles, having experienced first-hand the physical and psychological impact of musculoskeletal conditions.</p>
+                <img class="about-photo" src="profile.jpg" width="300" height="300" alt="Portrait of Noah Lim Tian Run">
             </div>
         </div>
     </section>
 
-    <!-- Work Experience -->
-    <section id="experience" class="section">
-        <div class="container">
-            <span class="section-label">Career</span>
-            <h2 class="section-title">Work Experience</h2>
-            <div class="section-divider"></div>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Singapore Civil Defence Force Medic</h3>
-                    <span class="experience-date">04/2021 – 07/2022</span>
-                </div>
-                <div class="experience-details">
-                    <ul>
-                        <li>Enhanced emergency response abilities</li>
-                        <li>Awarded Covid-19 Resilience Medal</li>
-                        <li>Best medic (1st division, EMT SIM Wars)</li>
-                        <li>Built a <strong>Python-Selenium script</strong> to automate medical inventory checks</li>
-                    </ul>
-                </div>
+    <!-- 02 Education -->
+    <section id="education" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">02</span><h2>Education</h2></header>
+            <div class="sec-body">
+                <article class="entry">
+                    <p class="entry-when">2022 &ndash; 2027<span>Expected</span></p>
+                    <div class="entry-what">
+                        <h3>Bachelor of Medicine and Bachelor of Surgery (MBBS)</h3>
+                        <p class="entry-org">Lee Kong Chian School of Medicine, Nanyang Technological University</p>
+                        <ul class="entry-points">
+                            <li>Dean&rsquo;s List: M1 (2022&ndash;23), M2 (2023&ndash;24), M3 (2024&ndash;25)</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry">
+                    <p class="entry-when">2020</p>
+                    <div class="entry-what">
+                        <h3>International Baccalaureate Diploma</h3>
+                        <p class="entry-org">Anglo-Chinese School (Independent)</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Awards and Achievements -->
-    <section id="awards" class="section">
-        <div class="container">
-            <span class="section-label">Honours</span>
-            <h2 class="section-title">Awards &amp; Achievements</h2>
-            <div class="section-divider"></div>
-
-            <!-- Tab Navigation -->
-            <div class="awards-tabs">
-                <button class="awards-tab active" data-tab="athletic">
-                    <i class="fas fa-running"></i> Athletic
-                </button>
-                <button class="awards-tab" data-tab="academic">
-                    <i class="fas fa-graduation-cap"></i> Academic &amp; Scholarships
-                </button>
+    <!-- 03 Experience -->
+    <section id="experience" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">03</span><h2>Experience</h2></header>
+            <div class="sec-body">
+                <article class="entry">
+                    <p class="entry-when">2021 &ndash; 2022</p>
+                    <div class="entry-what">
+                        <h3>Medic</h3>
+                        <p class="entry-org">Singapore Civil Defence Force</p>
+                        <ul class="entry-points">
+                            <li>Awarded the Covid-19 Resilience Medal</li>
+                            <li>Best medic, 1st division, EMT SIM Wars</li>
+                            <li>Built a Python and Selenium script to automate medical inventory checks</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
+        </div>
+    </section>
 
-            <!-- Athletic Awards -->
-            <div class="awards-panel active" id="tab-athletic">
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h4><a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank">JJAU World Championship</a></h4>
-                        <p>Silver Medal (2025, 2026)</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h4>SEA Games Gold Medalist</h4>
-                        <p>Jiu-Jitsu (2019, 2021, 2022)</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h4>Asian Games – 5th Place</h4>
-                        <p>Hangzhou (2023)<br>Aichi Nagoya (2026)</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <h4>World Pro Jiu-Jitsu Juvenile Champion</h4>
-                        <p>Abu Dhabi (2019)</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h4>Singapore National Jiujitsu Championship 1st Place</h4>
-                        <p>2019–2025</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h4>ACS OBA Sports Boy of the Year Award</h4>
-                        <p>2020</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>Evolve MMA Future World Champions Program</h4>
-                        <p>Full sponsorship to compete internationally</p>
-                    </div>
-                </div>
-            </div>
+    <!-- 04 Record -->
+    <section id="record" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">04</span><h2>Competition Record</h2></header>
+            <div class="sec-body">
+                <table class="record">
+                    <thead>
+                        <tr><th scope="col">Year</th><th scope="col">Competition</th><th scope="col">Result</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2026</td><td>Asian Games, Aichi-Nagoya</td><td>5th &middot; &minus;69 kg</td></tr>
+                        <tr class="is-medal"><td>2026</td><td>Ju-Jitsu World Championships, Abu Dhabi</td><td>Silver &middot; ne-waza &minus;69 kg</td></tr>
+                        <tr><td>2025</td><td>33rd SEA Games, Thailand</td><td>Team Singapore flag bearer</td></tr>
+                        <tr class="is-medal"><td>2025</td><td>Ju-Jitsu World Championships, Bangkok</td><td>Silver &middot; ne-waza &minus;69 kg</td></tr>
+                        <tr><td>2023</td><td>Asian Games, Hangzhou</td><td>5th &middot; &minus;69 kg</td></tr>
+                        <tr class="is-medal"><td>2023</td><td>32nd SEA Games, Phnom Penh</td><td>Gold &middot; ne-waza &minus;69 kg</td></tr>
+                        <tr class="is-medal"><td>2022</td><td>31st SEA Games, Hanoi</td><td>Gold &middot; &minus;69 kg</td></tr>
+                        <tr class="is-medal"><td>2019</td><td>30th SEA Games, Philippines</td><td>Gold &middot; &minus;62 kg</td></tr>
+                        <tr class="is-medal"><td>2019</td><td>World Pro Jiu-Jitsu Championship, Abu Dhabi</td><td>Juvenile champion</td></tr>
+                        <tr><td>2019&ndash;25</td><td>Singapore National Jiu-Jitsu Championships</td><td>1st place</td></tr>
+                    </tbody>
+                </table>
 
-            <!-- Academic Awards -->
-            <div class="awards-panel" id="tab-academic">
-                <div class="awards-grid">
-                    <div class="award-item">
-                        <div class="award-icon academic-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h4>NTU Talent Scholarship</h4>
-                        <p>Nanyang Technological University</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon academic-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h4>Sports Excellence (Spex) Scholarship</h4>
-                        <p>Singapore Olympic Committee (2024)</p>
-                    </div>
-                    <div class="award-item">
-                        <div class="award-icon academic-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h4>Peter Lim High Performance Athlete Scholarship</h4>
-                        <p>2020</p>
-                    </div>
-                </div>
+                <h3 class="sub-head">Honours &amp; scholarships</h3>
+                <ul class="honours">
+                    <li><span>NTU Talent Scholarship</span><span>Nanyang Technological University</span></li>
+                    <li><span>Sports Excellence (spex) Scholarship</span><span>2024</span></li>
+                    <li><span>Peter Lim High Performance Athlete Scholarship</span><span>2020</span></li>
+                    <li><span>ACS OBA Sports Boy of the Year</span><span>2020</span></li>
+                    <li><span>Evolve MMA Future World Champions Program</span><span>Full sponsorship to compete internationally</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Photos -->
-    <section id="photos" class="section section-photos">
-        <div class="container">
-            <span class="section-label">Photos</span>
-            <h2 class="section-title">On and Off the Mat</h2>
-            <div class="section-divider"></div>
-
-            <div class="photo-grid">
-                <figure class="photo">
-                    <img src="images/worlds-2025-silver.jpg" width="1050" height="1400" loading="lazy"
-                         alt="Noah Lim in a white gi holding his silver medal in front of the Ju-Jitsu World Championships backdrop in Bangkok">
-                    <figcaption><span class="photo-place">Bangkok, 2025</span>Silver at the Ju-Jitsu World Championships</figcaption>
-                </figure>
-                <figure class="photo photo-wide">
-                    <img src="images/flag-ceremony-2025.jpg" width="1400" height="934" loading="lazy"
-                         alt="Team Singapore officials and athletes, including Noah Lim, on stage as the Singapore flag is handed over at the flag presentation ceremony">
-                    <figcaption><span class="photo-place">Singapore, Nov 2025</span>Team Singapore flag presentation ceremony ahead of the SEA Games</figcaption>
-                </figure>
-                <figure class="photo">
-                    <img src="images/training.jpg" width="1050" height="1400" loading="lazy"
-                         alt="Noah Lim with three training partners in white gis and black belts on the mats">
-                    <figcaption><span class="photo-place">Training</span>On the mats with training partners</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills and Certifications -->
-    <section id="skills" class="section">
-        <div class="container">
-            <span class="section-label">Expertise</span>
-            <h2 class="section-title">Skills &amp; Certifications</h2>
-            <div class="section-divider"></div>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Certifications</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PADI Open Water Diver</span>
-                        <span class="skill-tag">CITI Certificate</span>
-                        <span class="skill-tag">Basics of Clinical Research & SRMA Workshop</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Machine Learning</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="section">
-        <div class="container">
-            <span class="section-label">Publications &amp; Studies</span>
-            <h2 class="section-title">Research</h2>
-            <div class="section-divider"></div>
-            <div class="research-item">
-                <div class="research-header">
-                    <h3>Global Spine Conference 2024 (Thailand)</h3>
-                    <span class="research-type">Research</span>
-                </div>
-                <p class="research-title">"Improved Productivity Using Deep Learning Assisted Cobb Angle Measurement on Scoliosis Radiographs"</p>
-            </div>
-            <div class="research-item">
-                <div class="research-header">
-                    <h3>Deep Learning for CT Detection</h3>
-                    <span class="research-type">Research</span>
-                </div>
-                <p class="research-title"><a href="https://pubmed.ncbi.nlm.nih.gov/40647478/" target="_blank">Deep Learning for CT Detection of Metastatic Epidural Spinal Cord Compression</a></p>
-            </div>
-            <div class="research-item">
-                <div class="research-header">
-                    <h3>Prognostic Factors in Necrotizing Fasciitis</h3>
-                    <span class="research-type">Research</span>
-                </div>
-                <p class="research-title"><a href="https://annals.edu.sg/extremity-necrotising-fasciitis-outcomes/" target="_blank">Prognostic Factors in Necrotizing Fasciitis: 17-Year Retrospective Study (Singapore)</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- In the News -->
-    <section id="news" class="section">
-        <div class="container">
-            <span class="section-label">Media Coverage</span>
-            <h2 class="section-title">In the News</h2>
-            <div class="section-divider"></div>
-
-            <p class="press-outlets">
-                <span class="press-outlets-label">As featured in</span>
-                <span>The Straits Times</span><span>CNA</span><span>Lianhe Zaobao</span><span>8world</span><span>MONEY FM 89.3</span>
-            </p>
-
-            <figure class="press-quote">
-                <blockquote>
-                    <p>&ldquo;&hellip;grace is also found in victory, in how you win and what you say and how you behave after the yell of triumph and the clenched fist of glory.&rdquo;</p>
-                </blockquote>
-                <figcaption>
-                    Rohit Brijnath, <cite>The Straits Times</cite>, on Noah consoling the opponent he had just beaten at the 2026 Asian Games.
-                    <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener">Read the column</a>
-                </figcaption>
+    <section class="plates" aria-label="Photos">
+        <div class="wrap plates-grid">
+            <figure class="plate plate-wide">
+                <img src="images/flag-ceremony-2025.jpg" width="1400" height="934" loading="lazy"
+                     alt="Team Singapore officials and athletes, including Noah Lim, on stage as the Singapore flag is handed over at the flag presentation ceremony">
+                <figcaption><span>Singapore, November 2025</span>Team Singapore flag presentation ceremony ahead of the SEA Games</figcaption>
             </figure>
+            <figure class="plate">
+                <img src="images/training.jpg" width="1050" height="1400" loading="lazy"
+                     alt="Noah Lim with three training partners in white gis and black belts on the mats">
+                <figcaption><span>Training</span>On the mats with training partners</figcaption>
+            </figure>
+        </div>
+    </section>
 
-            <div class="press-toolbar">
+    <!-- 05 Research -->
+    <section id="research" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">05</span><h2>Research</h2></header>
+            <div class="sec-body">
+                <article class="entry">
+                    <p class="entry-when">2024<span>Presentation</span></p>
+                    <div class="entry-what">
+                        <h3>Improved productivity using deep learning assisted Cobb angle measurement on scoliosis radiographs</h3>
+                        <p class="entry-org">Global Spine Conference 2024, Thailand</p>
+                    </div>
+                </article>
+                <article class="entry">
+                    <p class="entry-when"><span>Publication</span></p>
+                    <div class="entry-what">
+                        <h3><a href="https://pubmed.ncbi.nlm.nih.gov/40647478/" target="_blank" rel="noopener">Deep learning for CT detection of high-grade metastatic epidural spinal cord compression and its impact on treatment delays</a></h3>
+                        <p class="entry-org">PubMed</p>
+                    </div>
+                </article>
+                <article class="entry">
+                    <p class="entry-when"><span>Publication</span></p>
+                    <div class="entry-what">
+                        <h3><a href="https://annals.edu.sg/extremity-necrotising-fasciitis-outcomes/" target="_blank" rel="noopener">Prognostic factors and outcomes of extremity necrotising fasciitis in Singapore: insights from a 17-year retrospective cohort study</a></h3>
+                        <p class="entry-org">Annals of the Academy of Medicine, Singapore</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06 Skills -->
+    <section id="skills" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">06</span><h2>Skills</h2></header>
+            <div class="sec-body">
+                <dl class="skills">
+                    <div><dt>Certifications</dt><dd>PADI Open Water Diver &middot; CITI Certificate &middot; Basics of Clinical Research &amp; SRMA Workshop</dd></div>
+                    <div><dt>Technical</dt><dd>Python &middot; JavaScript &middot; Machine learning</dd></div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 Press -->
+    <section id="news" class="sec">
+        <div class="wrap sec-grid">
+            <header class="sec-head"><span class="sec-num">07</span><h2>Press</h2></header>
+            <div class="sec-body">
+                <figure class="press-quote">
+                    <blockquote>
+                        <p>&ldquo;&hellip;grace is also found in victory, in how you win and what you say and how you behave after the yell of triumph and the clenched fist of glory.&rdquo;</p>
+                    </blockquote>
+                    <figcaption>
+                        Rohit Brijnath, <cite>The Straits Times</cite>, on Noah consoling the opponent he had just beaten at the 2026 Asian Games.
+                        <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener">Read the column</a>
+                    </figcaption>
+                </figure>
+
+                <p class="press-outlets">Featured in The Straits Times, CNA, Lianhe Zaobao, 8world and MONEY FM 89.3.</p>
+
+                <div class="press-toolbar">
                 <div class="press-filters" role="group" aria-label="Filter by topic">
                     <button class="press-filter active" data-filter-topic="all" aria-pressed="true">All</button>
                     <button class="press-filter" data-filter-topic="asian-games" aria-pressed="false">Asian Games</button>
@@ -525,35 +414,36 @@
                 </div>
             </div>
 
-            <p class="press-empty" hidden>Nothing matches those filters yet.</p>
-
-            <p class="press-profile">
-                <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank" rel="noopener">Athlete profile on teamsingapore.sg</a>
-            </p>
+                <p class="press-empty" hidden>Nothing matches those filters yet.</p>
+                <p class="press-profile">
+                    <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank" rel="noopener">Athlete profile on teamsingapore.sg</a>
+                </p>
+            </div>
         </div>
     </section>
+    </main>
 
-    <!-- Footer with Social Links -->
-    <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://sg.linkedin.com/in/noah-lim-a646b7267" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCxd2l6lW6b84j6IthHCO2sA" class="social-link" title="YouTube" target="_blank" rel="noopener">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://github.com/" class="social-link" title="GitHub" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/noah.lim/?hl=en" class="social-link" title="Instagram" target="_blank" rel="noopener">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@noahlimjj" class="social-link" title="TikTok" target="_blank" rel="noopener">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+    <!-- Contact -->
+    <footer id="contact" class="contact">
+        <div class="wrap contact-grid">
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h2 class="contact-title">Get in touch</h2>
             </div>
-            <p class="footer-text">&copy; 2026 Noah Lim Tian Run. All rights reserved.</p>
+            <div class="contact-body">
+                <a class="contact-email" href="mailto:noahlimjj@gmail.com">noahlimjj@gmail.com</a>
+                <a class="contact-phone" href="tel:+6596467502">+65 9646 7502</a>
+                <ul class="contact-social">
+                    <li><a href="https://sg.linkedin.com/in/noah-lim-a646b7267" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/noah.lim/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCxd2l6lW6b84j6IthHCO2sA" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="https://www.tiktok.com/@noahlimjj" target="_blank" rel="noopener">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap contact-foot">
+            <p>&copy; 2026 Noah Lim Tian Run</p>
+            <a href="#top">Back to top</a>
         </div>
     </footer>
     </div>
@@ -628,8 +518,6 @@
         </div>
     </div>
 
-    <script src="data.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

@@ -1,280 +1,69 @@
-// Mobile Navigation Toggle
+// Mobile navigation
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+function setMenu(open) {
+    hamburger.classList.toggle('active', open);
+    navMenu.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+}
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+hamburger.addEventListener('click', () => setMenu(!navMenu.classList.contains('active')));
+document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Active navigation highlighting
-const sections = document.querySelectorAll('section[id]');
+// Navbar rule + active section highlighting
+const navbar = document.querySelector('.navbar');
+const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.scrollY + 100;
+function onScroll() {
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
 
+    let current = '';
+    const probe = window.scrollY + window.innerHeight * 0.3;
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
+        if (probe >= section.offsetTop) current = section.id;
     });
+    // Experience and Skills have no nav link; keep the nearest one highlighted
+    const alias = { experience: 'education', skills: 'research' };
+    current = alias[current] || current;
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
-});
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// CV Download functionality
-document.getElementById('download-cv').addEventListener('click', function(e) {
+// CV download
+document.getElementById('download-cv').addEventListener('click', e => {
     e.preventDefault();
     const link = document.createElement('a');
     link.href = 'Noah Lim CV.docx';
     link.download = 'Noah_Lim_CV.docx';
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
-    showNotification('CV downloaded successfully!', 'success');
+    link.remove();
 });
 
-// Notification system
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.textContent = message;
-    
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#059669' : '#1e3a8a'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 10000;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
-
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for animation
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
-
-// Award items animation
-document.querySelectorAll('.award-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    
-    const awardObserver = new IntersectionObserver((entries) => {
+// Quiet fade-in for sections as they scroll into view
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const reveal = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-visible');
+                reveal.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-    
-    awardObserver.observe(item);
-});
+    }, { rootMargin: '0px 0px -10% 0px' });
 
-// Skills animation
-document.querySelectorAll('.skill-tag').forEach((tag, index) => {
-    tag.style.opacity = '0';
-    tag.style.transform = 'scale(0.8)';
-    tag.style.transition = `opacity 0.4s ease ${index * 0.05}s, transform 0.4s ease ${index * 0.05}s`;
-    
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'scale(1)';
-            }
-        });
-    }, observerOptions);
-    
-    skillObserver.observe(tag);
-});
-
-// Research items animation
-document.querySelectorAll('.research-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateX(-30px)';
-    item.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-    
-    const researchObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
-            }
-        });
-    }, observerOptions);
-    
-    researchObserver.observe(item);
-});
-
-// Typing effect for hero title (optional enhancement)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    const originalText = heroTitle.textContent;
-    
-    // Uncomment the line below to enable typing effect
-    // typeWriter(heroTitle, originalText, 150);
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// Add scroll to top functionality
-const scrollToTopBtn = document.getElementById('scrollToTop');
-if (scrollToTopBtn) {
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
+    document.querySelectorAll('.sec, .plates').forEach(el => {
+        el.classList.add('reveal');
+        reveal.observe(el);
     });
 }
 
-// Awards tab switching
-const awardsTabs = document.querySelectorAll('.awards-tab');
-const awardsPanels = document.querySelectorAll('.awards-panel');
-
-awardsTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = tab.getAttribute('data-tab');
-
-        awardsTabs.forEach(t => t.classList.remove('active'));
-        awardsPanels.forEach(p => p.classList.remove('active'));
-
-        tab.classList.add('active');
-        const panel = document.getElementById(`tab-${target}`);
-        if (panel) {
-            panel.classList.add('active');
-
-            // Re-trigger staggered card animations within the newly active panel
-            panel.querySelectorAll('.award-item').forEach((item, i) => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(16px)';
-                setTimeout(() => {
-                    item.style.transition = `opacity 0.4s ease, transform 0.4s ease`;
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                }, i * 80);
-            });
-        }
-    });
-});
-
-// News filters (topic + language)
+// Press filters (topic + language)
 const pressItems = document.querySelectorAll('.press-item');
 const pressYears = document.querySelectorAll('.press-year');
 const pressEmpty = document.querySelector('.press-empty');
