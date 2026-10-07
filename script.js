@@ -35,17 +35,6 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// CV download
-document.getElementById('download-cv').addEventListener('click', e => {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'Noah Lim CV.docx';
-    link.download = 'Noah_Lim_CV.docx';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-});
-
 // Quiet fade-in for sections as they scroll into view
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const reveal = new IntersectionObserver(entries => {

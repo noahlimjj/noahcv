@@ -1,0 +1,7 @@
+{
+  "name": "noah-lim-cv",
+  "private": true,
+  "description": "Builds the downloadable CV (Word + PDF) from cv-data.js",
+  "scripts": { "build": "node build.js" },
+  "dependencies": { "docx": "^9.5.1" }
+}
