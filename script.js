@@ -244,23 +244,105 @@ if (scrollToTopBtn) {
     });
 }
 
-// Read More Dropdown functionality
-const readMoreDropdown = document.querySelector('.read-more-dropdown');
-const dropdownBtn = document.querySelector('.dropdown-btn');
-const dropdownContent = document.querySelector('.dropdown-content');
-if (readMoreDropdown && dropdownBtn && dropdownContent) {
-    dropdownBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        readMoreDropdown.classList.toggle('open');
-    });
-    // Prevent dropdown from closing when clicking inside
-    dropdownContent.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!readMoreDropdown.contains(e.target)) {
-            readMoreDropdown.classList.remove('open');
+// Awards tab switching
+const awardsTabs = document.querySelectorAll('.awards-tab');
+const awardsPanels = document.querySelectorAll('.awards-panel');
+
+awardsTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+
+        awardsTabs.forEach(t => t.classList.remove('active'));
+        awardsPanels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const panel = document.getElementById(`tab-${target}`);
+        if (panel) {
+            panel.classList.add('active');
+
+            // Re-trigger staggered card animations within the newly active panel
+            panel.querySelectorAll('.award-item').forEach((item, i) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(16px)';
+                setTimeout(() => {
+                    item.style.transition = `opacity 0.4s ease, transform 0.4s ease`;
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, i * 80);
+            });
         }
     });
-} 
+});
+
+// News card animations
+document.querySelectorAll('.news-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity 0.5s ease ${(index % 3) * 0.07}s, transform 0.5s ease ${(index % 3) * 0.07}s`;
+
+    const newsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    newsObserver.observe(card);
+});
+
+// News featured card animation
+const newsFeatured = document.querySelector('.news-featured');
+if (newsFeatured) {
+    newsFeatured.style.opacity = '0';
+    newsFeatured.style.transform = 'translateY(20px)';
+    newsFeatured.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+    const featuredObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    featuredObserver.observe(newsFeatured);
+}
+
+// News filters (topic + language)
+const newsCards = document.querySelectorAll('.news-grid .news-card');
+const newsEmpty = document.querySelector('.news-empty');
+const newsFilterState = { topic: 'all', lang: 'all' };
+
+function applyNewsFilters() {
+    let visible = 0;
+    newsCards.forEach(card => {
+        const topics = (card.dataset.topic || '').split(' ');
+        const matchTopic = newsFilterState.topic === 'all' || topics.includes(newsFilterState.topic);
+        const matchLang = newsFilterState.lang === 'all' || card.dataset.lang === newsFilterState.lang;
+        card.hidden = !(matchTopic && matchLang);
+        if (!card.hidden) visible++;
+    });
+    if (newsEmpty) newsEmpty.hidden = visible > 0;
+}
+
+function bindNewsFilter(selector, key, attr) {
+    const buttons = document.querySelectorAll(selector);
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+            newsFilterState[key] = btn.getAttribute(attr);
+            applyNewsFilters();
+        });
+    });
+}
+
+bindNewsFilter('.news-filter', 'topic', 'data-filter-topic');
+bindNewsFilter('.news-lang', 'lang', 'data-filter-lang');

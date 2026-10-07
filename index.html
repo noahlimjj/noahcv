@@ -27,6 +27,7 @@
                 <li><a href="#awards" class="nav-link">Awards</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#news" class="nav-link">News</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -140,70 +141,96 @@
             <span class="section-label">Honours</span>
             <h2 class="section-title">Awards &amp; Achievements</h2>
             <div class="section-divider"></div>
-            <div class="awards-grid">
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h4><a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank">JJAU World Championship</a></h4>
-                    <p>Silver Medal (2025, 2026)</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h4>Sports Excellence (Spex) Scholarship</h4>
-                    <p>Singapore Olympic Committee (2024)</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h4>SEA Games Gold Medalist</h4>
-                    <p>Jiu-Jitsu (2019, 2021, 2022)</p>
-                </div>
 
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
+            <!-- Tab Navigation -->
+            <div class="awards-tabs">
+                <button class="awards-tab active" data-tab="athletic">
+                    <i class="fas fa-running"></i> Athletic
+                </button>
+                <button class="awards-tab" data-tab="academic">
+                    <i class="fas fa-graduation-cap"></i> Academic &amp; Scholarships
+                </button>
+            </div>
+
+            <!-- Athletic Awards -->
+            <div class="awards-panel active" id="tab-athletic">
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4><a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank">JJAU World Championship</a></h4>
+                        <p>Silver Medal (2025, 2026)</p>
                     </div>
-                    <h4>Asian Games – 5th Place</h4>
-                    <p>Hangzhou (2023)<br>Aichi Nagoya (2026)</p>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>SEA Games Gold Medalist</h4>
+                        <p>Jiu-Jitsu (2019, 2021, 2022)</p>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Asian Games – 5th Place</h4>
+                        <p>Hangzhou (2023)<br>Aichi Nagoya (2026)</p>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>World Pro Jiu-Jitsu Juvenile Champion</h4>
+                        <p>Abu Dhabi (2019)</p>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Singapore National Jiujitsu Championship 1st Place</h4>
+                        <p>2019–2025</p>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>ACS OBA Sports Boy of the Year Award</h4>
+                        <p>2020</p>
+                    </div>
+                    <div class="award-item">
+                        <div class="award-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Evolve MMA Future World Champions Program</h4>
+                        <p>Full sponsorship to compete internationally</p>
+                    </div>
                 </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-crown"></i>
+            </div>
+
+            <!-- Academic Awards -->
+            <div class="awards-panel" id="tab-academic">
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <div class="award-icon academic-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>NTU Talent Scholarship</h4>
+                        <p>Nanyang Technological University</p>
                     </div>
-                    <h4>World Pro Jiu-Jitsu Juvenile Champion</h4>
-                    <p>Abu Dhabi (2019)</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-star"></i>
+                    <div class="award-item">
+                        <div class="award-icon academic-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Sports Excellence (Spex) Scholarship</h4>
+                        <p>Singapore Olympic Committee (2024)</p>
                     </div>
-                    <h4>Evolve MMA Future World Champions Program</h4>
-                    <p>Full sponsorship to compete internationally</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-trophy"></i>
+                    <div class="award-item">
+                        <div class="award-icon academic-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Peter Lim High Performance Athlete Scholarship</h4>
+                        <p>2020</p>
                     </div>
-                    <h4>ACS OBA Sports Boy of the Year Award</h4>
-                    <p>2020</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h4>Peter Lim High Performance Athlete Scholarship</h4>
-                    <p>2020</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h4>Singapore National Jiujitsu Championship 1st Place</h4>
-                    <p>2019-2025</p>
                 </div>
             </div>
         </div>
@@ -266,6 +293,167 @@
         </div>
     </section>
 
+    <!-- In the News -->
+    <section id="news" class="section">
+        <div class="container">
+            <span class="section-label">Media Coverage</span>
+            <h2 class="section-title">In the News</h2>
+            <div class="section-divider"></div>
+            <p class="news-intro">
+                Coverage from The Straits Times, CNA, Lianhe Zaobao, 8world and MONEY FM 89.3.
+                <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank" rel="noopener">Official Team Singapore profile <i class="fas fa-arrow-right"></i></a>
+            </p>
+
+            <!-- Featured -->
+            <div class="news-featured">
+                <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener" class="news-featured-link">
+                    <div class="news-featured-badge"><i class="fas fa-star"></i> Featured · The Straits Times · Oct 2026</div>
+                    <h3>From jiu-jitsu fighter Noah Lim a lovely lesson: Grace after grit</h3>
+                    <p class="news-featured-dek">Rohit Brijnath's column on sportsmanship at the Aichi-Nagoya Asian Games.</p>
+                    <span class="news-featured-cta">Read the column <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <!-- Filters -->
+            <div class="news-filters">
+                <div class="news-filter-group" role="group" aria-label="Filter by topic">
+                    <button class="news-filter active" data-filter-topic="all" aria-pressed="true">All</button>
+                    <button class="news-filter" data-filter-topic="asian-games" aria-pressed="false">Asian Games 2026</button>
+                    <button class="news-filter" data-filter-topic="worlds" aria-pressed="false">World Championships</button>
+                    <button class="news-filter" data-filter-topic="sea-games" aria-pressed="false">SEA Games</button>
+                    <button class="news-filter" data-filter-topic="video" aria-pressed="false"><i class="fas fa-play-circle"></i> Video</button>
+                    <button class="news-filter" data-filter-topic="radio" aria-pressed="false"><i class="fas fa-podcast"></i> Radio</button>
+                </div>
+                <div class="news-lang-group" role="group" aria-label="Filter by language">
+                    <button class="news-lang active" data-filter-lang="all" aria-pressed="true">All</button>
+                    <button class="news-lang" data-filter-lang="en" aria-pressed="false">English</button>
+                    <button class="news-lang" data-filter-lang="zh" aria-pressed="false" lang="zh">中文</button>
+                </div>
+            </div>
+
+            <div class="news-grid">
+                <!-- 2026 · Asian Games -->
+                <a href="https://www.straitstimes.com/sport/hearing-majulah-singapura-show-of-sportsmanship-and-bad-translations-moments-of-2026-asian-games" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Oct 2026</span></div>
+                    <h4>Hearing Majulah Singapura, show of sportsmanship and bad translations: Moments of 2026 Asian Games</h4>
+                    <span class="news-card-tag tag-competition">Asian Games 2026</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/4-sports-4-sibling-pairs-team-singapores-athletes-share-more-than-a-love-for-sport" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Oct 2026</span></div>
+                    <h4>4 sports, 4 sibling pairs: Team Singapore's athletes share more than a love for sport</h4>
+                    <span class="news-card-tag tag-profile">Feature</span>
+                </a>
+
+                <a href="https://www.channelnewsasia.com/watch/asian-games-singapores-ju-jitsu-exponent-noah-lim-misses-out-medal-6424851" target="_blank" rel="noopener" class="news-card news-card-video" data-topic="asian-games video" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-tv"></i> CNA <span class="news-card-year">Oct 2026</span></div>
+                    <h4>Asian Games: Singapore's ju-jitsu exponent Noah Lim misses out on medal</h4>
+                    <span class="news-card-tag tag-video"><i class="fas fa-play-circle"></i> Video</span>
+                </a>
+
+                <a href="https://www.zaobao.com.sg/news/sports/story20261001-9764690" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="zh">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Oct 2026</span></div>
+                    <h4 lang="zh">再与奖牌擦肩而过 新加坡巴柔好手林天润失落但不忘队友</h4>
+                    <p class="news-card-gloss">Missing a medal again, Noah stays focused on his teammates.</p>
+                    <span class="news-card-tag tag-lang">中文</span>
+                </a>
+
+                <a href="https://www.8world.com/sports/asian-game-2026-ju-jitsu-3296746" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="zh">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 8world <span class="news-card-year">Oct 2026</span></div>
+                    <h4 lang="zh">林天润闯巴西柔术铜牌战 惜败无缘奖牌</h4>
+                    <p class="news-card-gloss">Noah reaches the bronze medal match and finishes fifth.</p>
+                    <span class="news-card-tag tag-lang">中文</span>
+                </a>
+
+                <a href="https://www.channelnewsasia.com/sport/asian-games-seven-singapore-athletes-6390866" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> CNA <span class="news-card-year">Sep 2026</span></div>
+                    <h4>Seven Singapore athletes to look out for at the 2026 Asian Games in Japan</h4>
+                    <span class="news-card-tag tag-competition">Asian Games 2026</span>
+                </a>
+
+                <!-- 2026 · Radio -->
+                <a href="https://open.spotify.com/episode/1xdKdlY2RW77QgBKjZSKrd" target="_blank" rel="noopener" class="news-card news-card-radio" data-topic="radio" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-broadcast-tower"></i> MONEY FM 89.3 <span class="news-card-year">Sep 2026</span></div>
+                    <h4>The Agenda: Can 'hard work' alone get you ahead anymore?</h4>
+                    <p class="news-card-gloss">Hongbin Jeong talks to Noah and Paul Lim about success beyond hard work.</p>
+                    <span class="news-card-tag tag-radio"><i class="fas fa-headphones"></i> Radio</span>
+                </a>
+
+                <!-- World Championships -->
+                <a href="https://www.straitstimes.com/sport/combat-sports/singapores-noah-lim-clinches-silver-at-ju-jitsu-world-championships" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Aug 2026</span></div>
+                    <h4>Taking gap year reaps silver for S'pore's Noah Lim at ju-jitsu world c'ships</h4>
+                    <span class="news-card-tag tag-competition">World Championships</span>
+                </a>
+
+                <a href="https://www.zaobao.com.sg/news/sports/story20260808-9491371" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="zh">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Aug 2026</span></div>
+                    <h4 lang="zh">林天润连续两年获柔术世锦赛银牌 剑指亚运会奖牌</h4>
+                    <p class="news-card-gloss">A second straight world championships silver, with eyes on the Asian Games.</p>
+                    <span class="news-card-tag tag-lang">中文</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/sea-games-2025-noah-lims-flight-to-fourth-consecutive-gold-halted-in-opening-round" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Dec 2025</span></div>
+                    <h4>SEA Games 2025: Noah Lim's flight to fourth consecutive ju-jitsu gold halted in opening round</h4>
+                    <span class="news-card-tag tag-competition">SEA Games</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Nov 2025</span></div>
+                    <h4>Training smarter spurs S'pore ju-jitsu exponent Noah Lim to silver at world championships</h4>
+                    <span class="news-card-tag tag-competition">World Championships</span>
+                </a>
+
+                <a href="https://www.zaobao.com.sg/news/sports/story20251107-7785945" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="zh">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Nov 2025</span></div>
+                    <h4 lang="zh">林天润巴西柔术世锦赛摘银 称"聪明训练"取得突破</h4>
+                    <p class="news-card-gloss">First world championships podium, credited to "smart training".</p>
+                    <span class="news-card-tag tag-lang">中文</span>
+                </a>
+
+                <!-- SEA Games -->
+                <a href="https://www.channelnewsasia.com/sport/ju-jitsu-fighter-noah-lim-wins-singapores-first-gold-32nd-sea-games-3469466" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> CNA <span class="news-card-year">May 2023</span></div>
+                    <h4>Ju-jitsu fighter Noah Lim conquers injury, wins Singapore's first gold at 32nd SEA Games</h4>
+                    <span class="news-card-tag tag-competition">SEA Games</span>
+                </a>
+
+                <a href="https://www.channelnewsasia.com/watch/ju-jitsu-fighter-noah-lim-conquers-injury-wins-singapores-first-gold-32nd-sea-games-video-3469816" target="_blank" rel="noopener" class="news-card news-card-video" data-topic="sea-games video" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-tv"></i> CNA <span class="news-card-year">May 2023</span></div>
+                    <h4>Ju-jitsu fighter Noah Lim conquers injury, wins Singapore's first gold at 32nd SEA Games</h4>
+                    <span class="news-card-tag tag-video"><i class="fas fa-play-circle"></i> Video</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/sea-games-2023-first-gold-medal-for-singapore-as-noah-lim-comes-out-top-in-ju-jitsu" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">May 2023</span></div>
+                    <h4>SEA Games 2023: First gold medal for Singapore as Noah Lim comes out top in ju-jitsu</h4>
+                    <span class="news-card-tag tag-competition">SEA Games</span>
+                </a>
+
+                <a href="https://www.ntu.edu.sg/medicine/news-events/news/detail/lkcmedicine-student-noah-lim-wins-singapore's-first-jiu-jitsu-gold-at-sea-games" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-university"></i> NTU LKCMedicine <span class="news-card-year">May 2023</span></div>
+                    <h4>LKCMedicine student Noah Lim wins Singapore's first Jiu-Jitsu Gold at SEA Games</h4>
+                    <span class="news-card-tag tag-profile">Feature</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/combat-sports/sea-games-noah-lim-wins-back-to-back-gold-with-victory-in-jujitsu-mens-u-69kg" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">May 2022</span></div>
+                    <h4>SEA Games: Noah Lim wins back-to-back gold with victory in jujitsu men's U-69kg</h4>
+                    <span class="news-card-tag tag-competition">SEA Games</span>
+                </a>
+
+                <a href="https://www.straitstimes.com/sport/sea-games-noah-lim-submits-thai-opponent-to-win-jiu-jitsu-gold-for-singapore" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
+                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Dec 2019</span></div>
+                    <h4>SEA Games: Noah Lim submits Thai opponent to win jiu-jitsu gold for Singapore</h4>
+                    <span class="news-card-tag tag-competition">SEA Games</span>
+                </a>
+            </div>
+
+            <p class="news-empty" hidden>Nothing matches those filters yet.</p>
+        </div>
+    </section>
+
     <!-- Footer with Social Links -->
     <footer class="footer">
         <div class="container">
@@ -286,34 +474,7 @@
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
-            <p class="footer-text">&copy; 2024 Noah Lim Tian Run. All rights reserved.</p>
-
-            <div class="read-more-dropdown">
-                <button class="dropdown-btn">Read More <i class="fas fa-chevron-down"></i></button>
-                <div class="dropdown-content">
-                    <div class="dropdown-section">
-                        <div class="dropdown-heading">Official Athlete Profile</div>
-                        <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank">Noah Lim - Team Singapore Profile</a>
-                    </div>
-                    <div class="dropdown-section">
-                        <div class="dropdown-heading">SEA Games</div>
-                        <a href="https://www.straitstimes.com/sport/sea-games-noah-lim-submits-thai-opponent-to-win-jiu-jitsu-gold-for-singapore" target="_blank">SEA Games: Noah Lim submits Thai opponent to win jiu-jitsu gold for Singapore (The Straits Times, 2019)</a>
-                        <a href="https://tnp.straitstimes.com/sports/team-singapore/swimming-and-chess-help-jiu-jitsu-exponent-noah-lim-win-sea-games-gold" target="_blank">Swimming and chess help jiu-jitsu exponent Noah Lim win SEA Games gold (The New Paper, 2019)</a>
-                        <a href="https://www.straitstimes.com/sport/sea-games-2023-first-gold-medal-for-singapore-as-noah-lim-comes-out-top-in-ju-jitsu" target="_blank">SEA Games 2023: First gold medal for Singapore as Noah Lim comes out top in ju-jitsu (The Straits Times, 2023)</a>
-                    </div>
-                    <div class="dropdown-section">
-                        <div class="dropdown-heading">Profiles, Features & Interviews</div>
-                        <a href="https://evolve-mma.com/blog/how-noah-lims-passion-for-bjj-changed-his-life-and-helped-him-make-history/" target="_blank">How Noah Lim's Passion For BJJ Changed His Life And Helped Him Make History (Evolve MMA, 2021)</a>
-                        <a href="https://evolve-mma.com/blog/congratulations-to-noah-lim-on-his-second-consecutive-gold-medal/" target="_blank">Congratulations To Noah Lim On His Second Consecutive Gold Medal (Evolve MMA, 2022)</a>
-                        <a href="https://www.ntu.edu.sg/medicine/news-events/news/detail/lkcmedicine-student-noah-lim-wins-singapore's-first-jiu-jitsu-gold-at-sea-games" target="_blank">LKCMedicine student Noah Lim wins Singapore's first Jiu-Jitsu Gold at SEA Games (NTU Medicine)</a>
-                    </div>
-                    <div class="dropdown-section">
-                        <div class="dropdown-heading">Videos</div>
-                        <a href="https://www.youtube.com/watch?v=6kXv1KjF7nE" target="_blank">Students of the Month: 20-year-old Paul & 16-year-old Noah Lim (YouTube, Evolve MMA, 2018)</a>
-                        <a href="https://www.youtube.com/watch?v=4wQn0hXvQh8" target="_blank">Martial Arts Changed My Life: Paul & Noah Lim (YouTube, Evolve MMA)</a>
-                    </div>
-                </div>
-            </div>
+            <p class="footer-text">&copy; 2026 Noah Lim Tian Run. All rights reserved.</p>
         </div>
     </footer>
     </div>
@@ -355,6 +516,7 @@
             <div class="pdf-cv-section">
                 <div class="pdf-cv-section-title">Awards and Achievements</div>
                 <ul class="pdf-cv-list">
+                    <li>NTU Talent Scholarship – Nanyang Technological University</li>
                     <li>JJAU World Championship – Silver Medal (2025, 2026) (<a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships">Read article</a>)</li>
                     <li>Sports Excellence (Spex) Scholarship in 2024 awarded by Singapore Olympic Committee</li>
                     <li>Multiple-time SEA Games Gold medalist in Jiu-jitsu (2019, 2021, 2022)</li>
