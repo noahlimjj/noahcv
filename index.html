@@ -7,8 +7,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -299,158 +300,209 @@
             <span class="section-label">Media Coverage</span>
             <h2 class="section-title">In the News</h2>
             <div class="section-divider"></div>
-            <p class="news-intro">
-                Coverage from The Straits Times, CNA, Lianhe Zaobao, 8world and MONEY FM 89.3.
-                <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank" rel="noopener">Official Team Singapore profile <i class="fas fa-arrow-right"></i></a>
+
+            <p class="press-outlets">
+                <span class="press-outlets-label">As featured in</span>
+                <span>The Straits Times</span><span>CNA</span><span>Lianhe Zaobao</span><span>8world</span><span>MONEY FM 89.3</span>
             </p>
 
-            <!-- Featured -->
-            <div class="news-featured">
-                <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener" class="news-featured-link">
-                    <div class="news-featured-badge"><i class="fas fa-star"></i> Featured · The Straits Times · Oct 2026</div>
-                    <h3>From jiu-jitsu fighter Noah Lim a lovely lesson: Grace after grit</h3>
-                    <p class="news-featured-dek">Rohit Brijnath's column on sportsmanship at the Aichi-Nagoya Asian Games.</p>
-                    <span class="news-featured-cta">Read the column <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
+            <figure class="press-quote">
+                <blockquote>
+                    <p>&ldquo;&hellip;grace is also found in victory, in how you win and what you say and how you behave after the yell of triumph and the clenched fist of glory.&rdquo;</p>
+                </blockquote>
+                <figcaption>
+                    Rohit Brijnath, <cite>The Straits Times</cite>, on Noah consoling the opponent he had just beaten at the 2026 Asian Games.
+                    <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener">Read the column</a>
+                </figcaption>
+            </figure>
 
-            <!-- Filters -->
-            <div class="news-filters">
-                <div class="news-filter-group" role="group" aria-label="Filter by topic">
-                    <button class="news-filter active" data-filter-topic="all" aria-pressed="true">All</button>
-                    <button class="news-filter" data-filter-topic="asian-games" aria-pressed="false">Asian Games 2026</button>
-                    <button class="news-filter" data-filter-topic="worlds" aria-pressed="false">World Championships</button>
-                    <button class="news-filter" data-filter-topic="sea-games" aria-pressed="false">SEA Games</button>
-                    <button class="news-filter" data-filter-topic="video" aria-pressed="false"><i class="fas fa-play-circle"></i> Video</button>
-                    <button class="news-filter" data-filter-topic="radio" aria-pressed="false"><i class="fas fa-podcast"></i> Radio</button>
+            <div class="press-toolbar">
+                <div class="press-filters" role="group" aria-label="Filter by topic">
+                    <button class="press-filter active" data-filter-topic="all" aria-pressed="true">All</button>
+                    <button class="press-filter" data-filter-topic="asian-games" aria-pressed="false">Asian Games</button>
+                    <button class="press-filter" data-filter-topic="worlds" aria-pressed="false">World Championships</button>
+                    <button class="press-filter" data-filter-topic="sea-games" aria-pressed="false">SEA Games</button>
+                    <button class="press-filter" data-filter-topic="video" aria-pressed="false">Video</button>
+                    <button class="press-filter" data-filter-topic="radio" aria-pressed="false">Radio</button>
                 </div>
-                <div class="news-lang-group" role="group" aria-label="Filter by language">
-                    <button class="news-lang active" data-filter-lang="all" aria-pressed="true">All</button>
-                    <button class="news-lang" data-filter-lang="en" aria-pressed="false">English</button>
-                    <button class="news-lang" data-filter-lang="zh" aria-pressed="false" lang="zh">中文</button>
+                <div class="press-filters press-langs" role="group" aria-label="Filter by language">
+                    <button class="press-lang active" data-filter-lang="all" aria-pressed="true">All languages</button>
+                    <button class="press-lang" data-filter-lang="en" aria-pressed="false">English</button>
+                    <button class="press-lang" data-filter-lang="zh" aria-pressed="false" lang="zh">中文</button>
                 </div>
             </div>
 
-            <div class="news-grid">
-                <!-- 2026 · Asian Games -->
-                <a href="https://www.straitstimes.com/sport/hearing-majulah-singapura-show-of-sportsmanship-and-bad-translations-moments-of-2026-asian-games" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Oct 2026</span></div>
-                    <h4>Hearing Majulah Singapura, show of sportsmanship and bad translations: Moments of 2026 Asian Games</h4>
-                    <span class="news-card-tag tag-competition">Asian Games 2026</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/4-sports-4-sibling-pairs-team-singapores-athletes-share-more-than-a-love-for-sport" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Oct 2026</span></div>
-                    <h4>4 sports, 4 sibling pairs: Team Singapore's athletes share more than a love for sport</h4>
-                    <span class="news-card-tag tag-profile">Feature</span>
-                </a>
-
-                <a href="https://www.channelnewsasia.com/watch/asian-games-singapores-ju-jitsu-exponent-noah-lim-misses-out-medal-6424851" target="_blank" rel="noopener" class="news-card news-card-video" data-topic="asian-games video" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-tv"></i> CNA <span class="news-card-year">Oct 2026</span></div>
-                    <h4>Asian Games: Singapore's ju-jitsu exponent Noah Lim misses out on medal</h4>
-                    <span class="news-card-tag tag-video"><i class="fas fa-play-circle"></i> Video</span>
-                </a>
-
-                <a href="https://www.zaobao.com.sg/news/sports/story20261001-9764690" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="zh">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Oct 2026</span></div>
-                    <h4 lang="zh">再与奖牌擦肩而过 新加坡巴柔好手林天润失落但不忘队友</h4>
-                    <p class="news-card-gloss">Missing a medal again, Noah stays focused on his teammates.</p>
-                    <span class="news-card-tag tag-lang">中文</span>
-                </a>
-
-                <a href="https://www.8world.com/sports/asian-game-2026-ju-jitsu-3296746" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="zh">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 8world <span class="news-card-year">Oct 2026</span></div>
-                    <h4 lang="zh">林天润闯巴西柔术铜牌战 惜败无缘奖牌</h4>
-                    <p class="news-card-gloss">Noah reaches the bronze medal match and finishes fifth.</p>
-                    <span class="news-card-tag tag-lang">中文</span>
-                </a>
-
-                <a href="https://www.channelnewsasia.com/sport/asian-games-seven-singapore-athletes-6390866" target="_blank" rel="noopener" class="news-card" data-topic="asian-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> CNA <span class="news-card-year">Sep 2026</span></div>
-                    <h4>Seven Singapore athletes to look out for at the 2026 Asian Games in Japan</h4>
-                    <span class="news-card-tag tag-competition">Asian Games 2026</span>
-                </a>
-
-                <!-- 2026 · Radio -->
-                <a href="https://open.spotify.com/episode/1xdKdlY2RW77QgBKjZSKrd" target="_blank" rel="noopener" class="news-card news-card-radio" data-topic="radio" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-broadcast-tower"></i> MONEY FM 89.3 <span class="news-card-year">Sep 2026</span></div>
-                    <h4>The Agenda: Can 'hard work' alone get you ahead anymore?</h4>
-                    <p class="news-card-gloss">Hongbin Jeong talks to Noah and Paul Lim about success beyond hard work.</p>
-                    <span class="news-card-tag tag-radio"><i class="fas fa-headphones"></i> Radio</span>
-                </a>
-
-                <!-- World Championships -->
-                <a href="https://www.straitstimes.com/sport/combat-sports/singapores-noah-lim-clinches-silver-at-ju-jitsu-world-championships" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Aug 2026</span></div>
-                    <h4>Taking gap year reaps silver for S'pore's Noah Lim at ju-jitsu world c'ships</h4>
-                    <span class="news-card-tag tag-competition">World Championships</span>
-                </a>
-
-                <a href="https://www.zaobao.com.sg/news/sports/story20260808-9491371" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="zh">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Aug 2026</span></div>
-                    <h4 lang="zh">林天润连续两年获柔术世锦赛银牌 剑指亚运会奖牌</h4>
-                    <p class="news-card-gloss">A second straight world championships silver, with eyes on the Asian Games.</p>
-                    <span class="news-card-tag tag-lang">中文</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/sea-games-2025-noah-lims-flight-to-fourth-consecutive-gold-halted-in-opening-round" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Dec 2025</span></div>
-                    <h4>SEA Games 2025: Noah Lim's flight to fourth consecutive ju-jitsu gold halted in opening round</h4>
-                    <span class="news-card-tag tag-competition">SEA Games</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Nov 2025</span></div>
-                    <h4>Training smarter spurs S'pore ju-jitsu exponent Noah Lim to silver at world championships</h4>
-                    <span class="news-card-tag tag-competition">World Championships</span>
-                </a>
-
-                <a href="https://www.zaobao.com.sg/news/sports/story20251107-7785945" target="_blank" rel="noopener" class="news-card" data-topic="worlds" data-lang="zh">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> 联合早报 Lianhe Zaobao <span class="news-card-year">Nov 2025</span></div>
-                    <h4 lang="zh">林天润巴西柔术世锦赛摘银 称"聪明训练"取得突破</h4>
-                    <p class="news-card-gloss">First world championships podium, credited to "smart training".</p>
-                    <span class="news-card-tag tag-lang">中文</span>
-                </a>
-
-                <!-- SEA Games -->
-                <a href="https://www.channelnewsasia.com/sport/ju-jitsu-fighter-noah-lim-wins-singapores-first-gold-32nd-sea-games-3469466" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> CNA <span class="news-card-year">May 2023</span></div>
-                    <h4>Ju-jitsu fighter Noah Lim conquers injury, wins Singapore's first gold at 32nd SEA Games</h4>
-                    <span class="news-card-tag tag-competition">SEA Games</span>
-                </a>
-
-                <a href="https://www.channelnewsasia.com/watch/ju-jitsu-fighter-noah-lim-conquers-injury-wins-singapores-first-gold-32nd-sea-games-video-3469816" target="_blank" rel="noopener" class="news-card news-card-video" data-topic="sea-games video" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-tv"></i> CNA <span class="news-card-year">May 2023</span></div>
-                    <h4>Ju-jitsu fighter Noah Lim conquers injury, wins Singapore's first gold at 32nd SEA Games</h4>
-                    <span class="news-card-tag tag-video"><i class="fas fa-play-circle"></i> Video</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/sea-games-2023-first-gold-medal-for-singapore-as-noah-lim-comes-out-top-in-ju-jitsu" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">May 2023</span></div>
-                    <h4>SEA Games 2023: First gold medal for Singapore as Noah Lim comes out top in ju-jitsu</h4>
-                    <span class="news-card-tag tag-competition">SEA Games</span>
-                </a>
-
-                <a href="https://www.ntu.edu.sg/medicine/news-events/news/detail/lkcmedicine-student-noah-lim-wins-singapore's-first-jiu-jitsu-gold-at-sea-games" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-university"></i> NTU LKCMedicine <span class="news-card-year">May 2023</span></div>
-                    <h4>LKCMedicine student Noah Lim wins Singapore's first Jiu-Jitsu Gold at SEA Games</h4>
-                    <span class="news-card-tag tag-profile">Feature</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/combat-sports/sea-games-noah-lim-wins-back-to-back-gold-with-victory-in-jujitsu-mens-u-69kg" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">May 2022</span></div>
-                    <h4>SEA Games: Noah Lim wins back-to-back gold with victory in jujitsu men's U-69kg</h4>
-                    <span class="news-card-tag tag-competition">SEA Games</span>
-                </a>
-
-                <a href="https://www.straitstimes.com/sport/sea-games-noah-lim-submits-thai-opponent-to-win-jiu-jitsu-gold-for-singapore" target="_blank" rel="noopener" class="news-card" data-topic="sea-games" data-lang="en">
-                    <div class="news-card-source"><i class="fas fa-newspaper"></i> The Straits Times <span class="news-card-year">Dec 2019</span></div>
-                    <h4>SEA Games: Noah Lim submits Thai opponent to win jiu-jitsu gold for Singapore</h4>
-                    <span class="news-card-tag tag-competition">SEA Games</span>
-                </a>
+            <div class="press-list">
+                <div class="press-year">
+                    <h3 class="press-year-label">2026</h3>
+                    <ul>
+                        <li class="press-item" data-topic="asian-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/from-jiu-jitsu-fighter-noah-lim-a-lovely-lesson-grace-after-grit" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">From jiu-jitsu fighter Noah Lim a lovely lesson: Grace after grit</span>
+                                <span class="press-meta">Oct · Column</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/hearing-majulah-singapura-show-of-sportsmanship-and-bad-translations-moments-of-2026-asian-games" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">Hearing Majulah Singapura, show of sportsmanship and bad translations: Moments of 2026 Asian Games</span>
+                                <span class="press-meta">Oct</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/4-sports-4-sibling-pairs-team-singapores-athletes-share-more-than-a-love-for-sport" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">4 sports, 4 sibling pairs: Team Singapore’s athletes share more than a love for sport</span>
+                                <span class="press-meta">Oct · Feature</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games video" data-lang="en">
+                            <a href="https://www.channelnewsasia.com/watch/asian-games-singapores-ju-jitsu-exponent-noah-lim-misses-out-medal-6424851" target="_blank" rel="noopener">
+                                <span class="press-outlet">CNA</span>
+                                <span class="press-headline">Asian Games: Singapore’s ju-jitsu exponent Noah Lim misses out on medal</span>
+                                <span class="press-meta">Oct · Video</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games" data-lang="zh">
+                            <a href="https://www.zaobao.com.sg/news/sports/story20261001-9764690" target="_blank" rel="noopener">
+                                <span class="press-outlet">Lianhe Zaobao</span>
+                                <span class="press-headline" lang="zh">再与奖牌擦肩而过 新加坡巴柔好手林天润失落但不忘队友</span>
+                                <span class="press-gloss">Missing a medal again, Noah stays focused on his teammates.</span>
+                                <span class="press-meta">Oct</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games" data-lang="zh">
+                            <a href="https://www.8world.com/sports/asian-game-2026-ju-jitsu-3296746" target="_blank" rel="noopener">
+                                <span class="press-outlet">8world</span>
+                                <span class="press-headline" lang="zh">林天润闯巴西柔术铜牌战 惜败无缘奖牌</span>
+                                <span class="press-gloss">Noah reaches the bronze medal match and finishes fifth.</span>
+                                <span class="press-meta">Oct</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="asian-games" data-lang="en">
+                            <a href="https://www.channelnewsasia.com/sport/asian-games-seven-singapore-athletes-6390866" target="_blank" rel="noopener">
+                                <span class="press-outlet">CNA</span>
+                                <span class="press-headline">Seven Singapore athletes to look out for at the 2026 Asian Games in Japan</span>
+                                <span class="press-meta">Sep</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="radio" data-lang="en">
+                            <a href="https://open.spotify.com/episode/1xdKdlY2RW77QgBKjZSKrd" target="_blank" rel="noopener">
+                                <span class="press-outlet">MONEY FM 89.3</span>
+                                <span class="press-headline">The Agenda: Can ‘hard work’ alone get you ahead anymore?</span>
+                                <span class="press-gloss">Hongbin Jeong in conversation with Noah and Paul Lim.</span>
+                                <span class="press-meta">Sep · Radio</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="worlds" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/combat-sports/singapores-noah-lim-clinches-silver-at-ju-jitsu-world-championships" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">Taking gap year reaps silver for S’pore’s Noah Lim at ju-jitsu world c’ships</span>
+                                <span class="press-meta">Aug</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="worlds" data-lang="zh">
+                            <a href="https://www.zaobao.com.sg/news/sports/story20260808-9491371" target="_blank" rel="noopener">
+                                <span class="press-outlet">Lianhe Zaobao</span>
+                                <span class="press-headline" lang="zh">林天润连续两年获柔术世锦赛银牌 剑指亚运会奖牌</span>
+                                <span class="press-gloss">A second straight world championships silver, with eyes on the Asian Games.</span>
+                                <span class="press-meta">Aug</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="press-year">
+                    <h3 class="press-year-label">2025</h3>
+                    <ul>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/sea-games-2025-noah-lims-flight-to-fourth-consecutive-gold-halted-in-opening-round" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">SEA Games 2025: Noah Lim’s flight to fourth consecutive ju-jitsu gold halted in opening round</span>
+                                <span class="press-meta">Dec</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="worlds" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/training-smarter-spurs-spore-jiu-jitsu-exponent-noah-lim-to-silver-at-world-championships" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">Training smarter spurs S’pore ju-jitsu exponent Noah Lim to silver at world championships</span>
+                                <span class="press-meta">Nov</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="worlds" data-lang="zh">
+                            <a href="https://www.zaobao.com.sg/news/sports/story20251107-7785945" target="_blank" rel="noopener">
+                                <span class="press-outlet">Lianhe Zaobao</span>
+                                <span class="press-headline" lang="zh">林天润巴西柔术世锦赛摘银 称“聪明训练”取得突破</span>
+                                <span class="press-gloss">First world championships podium, credited to “smart training”.</span>
+                                <span class="press-meta">Nov</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="press-year">
+                    <h3 class="press-year-label">2023</h3>
+                    <ul>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.channelnewsasia.com/sport/ju-jitsu-fighter-noah-lim-wins-singapores-first-gold-32nd-sea-games-3469466" target="_blank" rel="noopener">
+                                <span class="press-outlet">CNA</span>
+                                <span class="press-headline">Ju-jitsu fighter Noah Lim conquers injury, wins Singapore’s first gold at 32nd SEA Games</span>
+                                <span class="press-meta">May</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="sea-games video" data-lang="en">
+                            <a href="https://www.channelnewsasia.com/watch/ju-jitsu-fighter-noah-lim-conquers-injury-wins-singapores-first-gold-32nd-sea-games-video-3469816" target="_blank" rel="noopener">
+                                <span class="press-outlet">CNA</span>
+                                <span class="press-headline">Ju-jitsu fighter Noah Lim conquers injury, wins Singapore’s first gold at 32nd SEA Games</span>
+                                <span class="press-meta">May · Video</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/sea-games-2023-first-gold-medal-for-singapore-as-noah-lim-comes-out-top-in-ju-jitsu" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">SEA Games 2023: First gold medal for Singapore as Noah Lim comes out top in ju-jitsu</span>
+                                <span class="press-meta">May</span>
+                            </a>
+                        </li>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.ntu.edu.sg/medicine/news-events/news/detail/lkcmedicine-student-noah-lim-wins-singapore&#x27;s-first-jiu-jitsu-gold-at-sea-games" target="_blank" rel="noopener">
+                                <span class="press-outlet">NTU LKCMedicine</span>
+                                <span class="press-headline">LKCMedicine student Noah Lim wins Singapore’s first Jiu-Jitsu Gold at SEA Games</span>
+                                <span class="press-meta">May · Feature</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="press-year">
+                    <h3 class="press-year-label">2022</h3>
+                    <ul>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/combat-sports/sea-games-noah-lim-wins-back-to-back-gold-with-victory-in-jujitsu-mens-u-69kg" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">SEA Games: Noah Lim wins back-to-back gold with victory in jujitsu men’s U-69kg</span>
+                                <span class="press-meta">May</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="press-year">
+                    <h3 class="press-year-label">2019</h3>
+                    <ul>
+                        <li class="press-item" data-topic="sea-games" data-lang="en">
+                            <a href="https://www.straitstimes.com/sport/sea-games-noah-lim-submits-thai-opponent-to-win-jiu-jitsu-gold-for-singapore" target="_blank" rel="noopener">
+                                <span class="press-outlet">The Straits Times</span>
+                                <span class="press-headline">SEA Games: Noah Lim submits Thai opponent to win jiu-jitsu gold for Singapore</span>
+                                <span class="press-meta">Dec</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <p class="news-empty" hidden>Nothing matches those filters yet.</p>
+            <p class="press-empty" hidden>Nothing matches those filters yet.</p>
+
+            <p class="press-profile">
+                <a href="https://www.teamsingapore.sg/athletes/noah-lim-tian-run" target="_blank" rel="noopener">Athlete profile on teamsingapore.sg</a>
+            </p>
         </div>
     </section>
 

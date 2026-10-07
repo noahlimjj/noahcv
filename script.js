@@ -274,61 +274,28 @@ awardsTabs.forEach(tab => {
     });
 });
 
-// News card animations
-document.querySelectorAll('.news-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = `opacity 0.5s ease ${(index % 3) * 0.07}s, transform 0.5s ease ${(index % 3) * 0.07}s`;
-
-    const newsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    newsObserver.observe(card);
-});
-
-// News featured card animation
-const newsFeatured = document.querySelector('.news-featured');
-if (newsFeatured) {
-    newsFeatured.style.opacity = '0';
-    newsFeatured.style.transform = 'translateY(20px)';
-    newsFeatured.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-    const featuredObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    featuredObserver.observe(newsFeatured);
-}
-
 // News filters (topic + language)
-const newsCards = document.querySelectorAll('.news-grid .news-card');
-const newsEmpty = document.querySelector('.news-empty');
-const newsFilterState = { topic: 'all', lang: 'all' };
+const pressItems = document.querySelectorAll('.press-item');
+const pressYears = document.querySelectorAll('.press-year');
+const pressEmpty = document.querySelector('.press-empty');
+const pressFilterState = { topic: 'all', lang: 'all' };
 
-function applyNewsFilters() {
-    let visible = 0;
-    newsCards.forEach(card => {
-        const topics = (card.dataset.topic || '').split(' ');
-        const matchTopic = newsFilterState.topic === 'all' || topics.includes(newsFilterState.topic);
-        const matchLang = newsFilterState.lang === 'all' || card.dataset.lang === newsFilterState.lang;
-        card.hidden = !(matchTopic && matchLang);
-        if (!card.hidden) visible++;
+function applyPressFilters() {
+    pressItems.forEach(item => {
+        const topics = (item.dataset.topic || '').split(' ');
+        const matchTopic = pressFilterState.topic === 'all' || topics.includes(pressFilterState.topic);
+        const matchLang = pressFilterState.lang === 'all' || item.dataset.lang === pressFilterState.lang;
+        item.hidden = !(matchTopic && matchLang);
     });
-    if (newsEmpty) newsEmpty.hidden = visible > 0;
+    let visibleYears = 0;
+    pressYears.forEach(year => {
+        year.hidden = !year.querySelector('.press-item:not([hidden])');
+        if (!year.hidden) visibleYears++;
+    });
+    if (pressEmpty) pressEmpty.hidden = visibleYears > 0;
 }
 
-function bindNewsFilter(selector, key, attr) {
+function bindPressFilter(selector, key, attr) {
     const buttons = document.querySelectorAll(selector);
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -338,11 +305,11 @@ function bindNewsFilter(selector, key, attr) {
             });
             btn.classList.add('active');
             btn.setAttribute('aria-pressed', 'true');
-            newsFilterState[key] = btn.getAttribute(attr);
-            applyNewsFilters();
+            pressFilterState[key] = btn.getAttribute(attr);
+            applyPressFilters();
         });
     });
 }
 
-bindNewsFilter('.news-filter', 'topic', 'data-filter-topic');
-bindNewsFilter('.news-lang', 'lang', 'data-filter-lang');
+bindPressFilter('.press-filter', 'topic', 'data-filter-topic');
+bindPressFilter('.press-lang', 'lang', 'data-filter-lang');
