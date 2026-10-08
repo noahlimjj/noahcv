@@ -11,9 +11,11 @@ function setMenu(open) {
 hamburger.addEventListener('click', () => setMenu(!navMenu.classList.contains('active')));
 document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-// Navbar rule + active section highlighting
+// Navbar rule + active chapter highlighting
 const navbar = document.querySelector('.navbar');
-const sections = document.querySelectorAll('main section[id]');
+const navTargets = ['about', 'medicine', 'jujitsu', 'press']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
 const navLinks = document.querySelectorAll('.nav-link');
 
 function onScroll() {
@@ -21,13 +23,9 @@ function onScroll() {
 
     let current = '';
     const probe = window.scrollY + window.innerHeight * 0.3;
-    sections.forEach(section => {
-        if (probe >= section.offsetTop) current = section.id;
+    navTargets.forEach(el => {
+        if (probe >= el.offsetTop) current = el.id;
     });
-    // Experience and Skills have no nav link; keep the nearest one highlighted
-    const alias = { experience: 'education', skills: 'research' };
-    current = alias[current] || current;
-
     navLinks.forEach(link => {
         link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
@@ -35,8 +33,12 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Quiet fade-in for sections as they scroll into view
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+    document.documentElement.classList.add('js-motion');
+
+    // Quiet fade-in for sections, and the timeline drawing itself
     const reveal = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -46,9 +48,96 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
         });
     }, { rootMargin: '0px 0px -10% 0px' });
 
-    document.querySelectorAll('.sec, .plates').forEach(el => {
+    document.querySelectorAll('.sec, .chapter-head').forEach(el => {
         el.classList.add('reveal');
         reveal.observe(el);
+    });
+    document.querySelectorAll('.timeline').forEach(el => reveal.observe(el));
+
+    // Hero facts count up once
+    document.querySelectorAll('.count').forEach(el => {
+        const to = Number(el.dataset.to);
+        const start = performance.now() + 500;
+        el.textContent = '0';
+        const tick = now => {
+            const t = Math.min(1, Math.max(0, (now - start) / 900));
+            el.textContent = String(Math.round(to * (1 - Math.pow(1 - t, 3))));
+            if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+    });
+
+    // Gentle parallax on the Ju-Jitsu cover photo
+    const cover = document.querySelector('.cover');
+    const coverImg = document.querySelector('.cover-img');
+    if (cover && coverImg) {
+        let ticking = false;
+        const update = () => {
+            const r = cover.getBoundingClientRect();
+            if (r.bottom > 0 && r.top < window.innerHeight) {
+                const progress = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+                coverImg.style.transform = `translateY(${(progress - 0.5) * -8}%)`;
+            }
+            ticking = false;
+        };
+        window.addEventListener('scroll', () => {
+            if (!ticking) { requestAnimationFrame(update); ticking = true; }
+        }, { passive: true });
+        update();
+    }
+}
+
+// Photo gallery: arrow buttons scroll one photo at a time
+const gallery = document.querySelector('.gallery');
+if (gallery) {
+    const step = dir => {
+        const item = gallery.querySelector('.g-item');
+        const gap = parseFloat(getComputedStyle(gallery).columnGap) || 24;
+        gallery.scrollBy({ left: dir * (item.offsetWidth + gap), behavior: reduceMotion ? 'auto' : 'smooth' });
+    };
+    document.querySelector('.g-prev')?.addEventListener('click', () => step(-1));
+    document.querySelector('.g-next')?.addEventListener('click', () => step(1));
+}
+
+// Lightbox
+const lightbox = document.querySelector('.lightbox');
+const galleryItems = [...document.querySelectorAll('.g-item')];
+if (lightbox && galleryItems.length && typeof lightbox.showModal === 'function') {
+    const lbImg = lightbox.querySelector('img');
+    const lbCap = lightbox.querySelector('figcaption');
+    let index = 0;
+
+    const show = i => {
+        index = (i + galleryItems.length) % galleryItems.length;
+        const img = galleryItems[index].querySelector('img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbCap.innerHTML = galleryItems[index].querySelector('figcaption').innerHTML;
+    };
+
+    galleryItems.forEach((item, i) => {
+        item.querySelector('.g-open').addEventListener('click', () => {
+            show(i);
+            lightbox.showModal();
+        });
+    });
+    lightbox.querySelector('.lb-close').addEventListener('click', () => lightbox.close());
+    lightbox.querySelector('.lb-prev').addEventListener('click', () => show(index - 1));
+    lightbox.querySelector('.lb-next').addEventListener('click', () => show(index + 1));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+    lightbox.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') show(index - 1);
+        if (e.key === 'ArrowRight') show(index + 1);
+    });
+
+    // Swipe between photos on touch screens
+    let touchX = null;
+    lightbox.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+        touchX = null;
     });
 }
 
