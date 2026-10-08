@@ -1,3 +1,27 @@
+// Password screen (temporary while the site is private)
+const gateForm = document.querySelector('.gate-form');
+if (gateForm) {
+    const sha256 = async text => {
+        const bytes = new TextEncoder().encode(text);
+        const digest = await crypto.subtle.digest('SHA-256', bytes);
+        return [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, '0')).join('');
+    };
+    if (document.documentElement.classList.contains('locked')) {
+        document.getElementById('gate-password').focus();
+    }
+    gateForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const input = document.getElementById('gate-password');
+        const ok = (await sha256(input.value)) === window.GATE_HASH;
+        gateForm.querySelector('.gate-error').hidden = ok;
+        if (!ok) { input.select(); return; }
+        try { localStorage.setItem('noahcv-gate', window.GATE_HASH); } catch (err) {}
+        document.documentElement.classList.remove('locked');
+        window.scrollTo(0, 0);
+        onScroll();
+    });
+}
+
 // Mobile navigation
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
